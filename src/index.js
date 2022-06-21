@@ -18,10 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
 				let reviews = document.createElement('li')
 				reviews.innerText = review
 				reviewList.appendChild(reviews)
-				// reviews.addEventListener('click', (e) => {
-				// 	e.preventDefault()
-				// 	reviews.remove()
-				// })
+				reviews.addEventListener('click', (e) => {
+					e.preventDefault()
+					reviews.remove()
+				})
 			})
 		})
 
