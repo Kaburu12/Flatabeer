@@ -16,5 +16,6 @@ function beerNavList() {
 				<h3>${values.reviews}</h3> </div>
 				`
 			})
+            document.querySelector("nav").innerHTML = data1;
 		})
     }
