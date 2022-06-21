@@ -16,5 +16,6 @@ function fetchData() {
     fetchData();
     function renderBeers(beers) {
         beers.forEach(beer => {   
-        
-        }
+        const beerList = document.getElementById("beer-list")
+        const flataBeer = document.createElement("li")
+    }
