@@ -7,13 +7,13 @@ function beerNavList() {
 			let data1 = "";
 			beersData.map((values) => {
 				data1 += ` <ul id="beer-list">
-				<li></li></ul>
+				<li>${values.name}</li></ul>
 				<div class="beer-details">
 			
 				<p>
-				  <em id="beer-description"></em>
+				  <em id="beer-description">${values.description}</em>
 				</p>
-				<h3></h3> </div>
+				<h3>${values.reviews}</h3> </div>
 				`
 			})
 		})
