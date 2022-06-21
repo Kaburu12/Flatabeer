@@ -1,3 +1,4 @@
+
 // Code here
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -5,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const beerImage = document.querySelector("#beer-image")
 	const beerDescription = document.querySelector("#beer-description")
 	const reviewList = document.getElementById("review-list")
+  beerNavList()
 
 	fetch("http://localhost:3000/beers")
 		.then((res) => res.json())
@@ -24,7 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
 				})
 			})
 		})
+  
 //adding a new review to the site
+  
 const reviewForm = document.getElementById('review-form')
 reviewForm.addEventListener('submit',(e)=>{
 	e.preventDefault()
@@ -39,6 +43,28 @@ reviewForm.addEventListener('submit',(e)=>{
 	})
 })
 
+  //Navlist display of beer
+  
+  function beerNavList() {
+	fetch("http://localhost:3000/beers")
+		.then((res) => res.json())
+       .then((beersData) => {
+			let data1 = "";
+			beersData.map((values) => {
+				data1 += ` <ul id="beer-list">
+				<li>${values.name}</li></ul>
+				<div class="beer-details">
+			
+				<p>
+				  <em id="beer-description">${values.description}</em>
+				</p>
+				<h3>${values.reviews}</h3> </div>
+				`
+			})
+            document.querySelector("nav").innerHTML = data1;
+		})
+    }
 
 
  })
+
