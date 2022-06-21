@@ -33,10 +33,10 @@ reviewForm.addEventListener('submit',(e)=>{
 	reviewUpdate.innerText = newReview
 	reviewList.appendChild(reviewUpdate)
 	reviewForm.reset()
-	// reviewUpdate.addEventListener('click',(e)=>{
-	// 	e.preventDefault()
-	// 	reviewUpdate.remove()
-	// })
+	reviewUpdate.addEventListener('click',(e)=>{
+		e.preventDefault()
+		reviewUpdate.remove()
+	})
 })
 
 
