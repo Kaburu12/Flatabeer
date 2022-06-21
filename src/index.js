@@ -18,4 +18,13 @@ function fetchData() {
         beers.forEach(beer => {   
         const beerList = document.getElementById("beer-list")
         const flataBeer = document.createElement("li")
+        flataBeer.textContent = beer.name
+        beerList.appendChild(flataBeer)
+        flataBeer.addEventListener('click', () => {
+            const beer_image = document.getElementById("beer-image")
+            beer_image.src = beer.image_url
+            console.log(beer_image)
+            const heading = document.querySelector('h2')
+            heading.textContent = beer.name;
+            const describe = document.getElementById("beer-description")
     }
