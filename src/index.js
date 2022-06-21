@@ -27,4 +27,9 @@ function fetchData() {
             const heading = document.querySelector('h2')
             heading.textContent = beer.name;
             const describe = document.getElementById("beer-description")
+            describe.textContent = beer.description;
+            const review = document.querySelector("#review-list")
+            review.textContent = beer.reviews;
+        });
+      });
     }
