@@ -28,11 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
 const reviewForm = document.getElementById('review-form')
 reviewForm.addEventListener('submit',(e)=>{
 	e.preventDefault()
-	// let newReview = document.getElementById("review").value
-	// let reviewUpdate = document.createElement('li')
-	// reviewUpdate.innerText = newReview
-	// reviewList.appendChild(reviewUpdate)
-	// reviewForm.reset()
+	let newReview = document.getElementById("review").value
+	let reviewUpdate = document.createElement('li')
+	reviewUpdate.innerText = newReview
+	reviewList.appendChild(reviewUpdate)
+	reviewForm.reset()
 	// reviewUpdate.addEventListener('click',(e)=>{
 	// 	e.preventDefault()
 	// 	reviewUpdate.remove()
